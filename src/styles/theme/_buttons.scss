@@ -1,0 +1,36 @@
+.btn-info {
+    color: $white;
+    background-color: $medium-aqua-marine;
+    border: none;
+    &:hover {
+        color: $white;
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+        box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+    }
+}
+
+.btn-outline-info {
+    color: $medium-aqua-marine;
+    background-color: transparent;
+    border-color: $medium-aqua-marine;
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: transparent;
+        box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+        border: 1px solid $medium-aqua-marine;
+    }
+}
+
+.btn-link {
+    color: $black;
+    font-size: .625rem;
+    &:hover {
+        color: $medium-aqua-marine;
+    }
+}

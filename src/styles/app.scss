@@ -1,1 +1,33 @@
 @import './theme/theme';
+.hero {
+    background-image: url('../assets/images/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    padding: 3rem 0 10rem 0;
+    @include media-breakpoint-down(lg) {
+        padding: 3rem 0 5rem 0;
+    }
+}
+
+.models-section {
+    padding: 5.813rem 0 10rem 0;
+    @include media-breakpoint-down(lg) {
+        padding: 3rem 0 5rem 0;
+    }
+}
+
+.learn-more-section {
+    background-color: $grey;
+    padding: 3.75rem 0 3.75rem 0;
+}
+
+.img-fluid {
+    height: 31.25rem;
+    object-fit: cover;
+    @include media-breakpoint-down(lg) {
+        height: 14rem;
+    }
+}
