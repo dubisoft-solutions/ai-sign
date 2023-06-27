@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './styles/app.scss';
+import herobg from './assets/images/hero-bg.png';
 
 function App() {
 
@@ -94,7 +95,7 @@ Github Copilot, ChatGPT, and StableDiffusion
                             <div className="card-body p-0">
                                 <div className="row d-flex align-items-center">
                                     <div className="col-lg-6 pe-lg-0">
-                                        <img src="src/assets/images/hero-bg.png" alt="Hero bg" className="img-fluid" />
+                                        <img src={herobg} alt="Hero bg" className="img-fluid" />
                                     </div>
                                     <div className="col-lg-6 px-5 text-start">
                                         <h3>Upload your digital art work, add a unique fingerprint</h3>
