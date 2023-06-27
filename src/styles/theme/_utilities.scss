@@ -26,6 +26,10 @@ p {
     color: $dark-grey!important;
 }
 
+.text-muted {
+    color: $grey-225!important;
+}
+
 h1 {
     @include media-breakpoint-down(lg) {
         font-size: 1.625rem!important;
@@ -40,11 +44,17 @@ h2 {
 
 .fs-1 {
     @include media-breakpoint-down(lg) {
-        font-size: 1.125rem!important;
+        font-size: 2rem!important;
     }
 }
 
 .fs-2 {
+    @include media-breakpoint-down(lg) {
+        font-size: 1.125rem!important;
+    }
+}
+
+.fs-3 {
     @include media-breakpoint-down(lg) {
         font-size: 1rem!important;
     }

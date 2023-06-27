@@ -1,6 +1,10 @@
-.nav-link {
-    color: $white;
-    &:hover {
-        color: $medium-aqua-marine;
+.navbar {
+    --navbar-height: 4.25rem;
+    &.navbar-expand .navbar-nav {
+        .nav-link {
+            font-weight: normal;
+            font-size: 1rem;
+            color: $white;
+        }
     }
 }

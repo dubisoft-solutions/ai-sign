@@ -3,10 +3,7 @@
     background-image: url('../assets/images/hero-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-main {
-    padding: 3rem 0 10rem 0;
+    padding: 7rem 0 10rem 0;
     @include media-breakpoint-down(lg) {
         padding: 3rem 0 5rem 0;
     }
@@ -25,9 +22,29 @@ main {
 }
 
 .img-fluid {
+    background-color: $white-249;
     height: 31.25rem;
-    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include media-breakpoint-down(lg) {
         height: 14rem;
+    }
+}
+
+.arrow-right {
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        background-image: url('../assets/images/arrow-right.svg');
+        background-repeat: no-repeat;
+        height: 1.5rem;
+        width: 1.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
     }
 }
