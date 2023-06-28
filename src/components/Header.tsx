@@ -2,10 +2,10 @@ import { Outlet, Link } from "react-router-dom";
 
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 
-const Header = () => {
+const Header = ({scrolled=false}) => {
     return (
         <header>
-            <nav className="navbar navbar-expand top-navbar navbar-dark fixed-top d-flex py-3 border-bottom">
+            <nav className={`navbar navbar-expand top-navbar navbar-dark fixed-top d-flex py-3 border-bottom` + (scrolled && ' scrolled')}>
                 <div className="container-fluid justify-content-end">
                     <ul className="navbar-nav">
                         <li className="nav-item">
