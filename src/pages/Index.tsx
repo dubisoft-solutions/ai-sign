@@ -4,6 +4,9 @@ import owners from '../assets/images/owners.png';
 import companies from '../assets/images/companies.png';
 import users from '../assets/images/users.png';
 import arrowright from '../assets/images/arrow-right.svg';
+import { Link } from 'react-router-dom';
+
+import { routeCodes } from '../routes'
 
 const IndexPage = () => {
 
@@ -25,7 +28,7 @@ const IndexPage = () => {
     Works for images, videos, audio, and text.</p>
                         <div className="d-lg-flex gap-2 d-grid">
                             <a className="btn btn-outline-info w-100" href="#" role="button">Watch how it works</a>
-                            <a className="btn btn-info w-100" href="#" role="button">Try a demo</a>
+                            <Link to={routeCodes.DEMO} className="btn btn-info w-100">Try a demo</Link>
                         </div>
                     </div>
                 </div>
@@ -133,7 +136,7 @@ Github Copilot, ChatGPT, and StableDiffusion
                         <h2 className="text-white mb-4">Learn more</h2>
                         <div className="d-lg-flex gap-2 d-grid">
                                 <a className="btn btn-outline-info w-100" href="#" role="button">Watch how it works</a>
-                                <a className="btn btn-info w-100" href="#" role="button">Try a demo</a>
+                                <Link to={routeCodes.DEMO} className="btn btn-info w-100" role="button">Try a demo</Link>
                             </div>
                     </div>
                 </div>
