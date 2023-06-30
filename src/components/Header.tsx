@@ -1,5 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 
+import logonav from '../assets/images/logo-nav.svg';
+
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { routeCodes, useMatchedRoute } from "../routes";
 
@@ -12,7 +14,9 @@ const Header = ({scrolled=false}) => {
             <nav className={`navbar navbar-expand top-navbar navbar-dark fixed-top d-flex py-3 border-bottom` + ((scrolled || showFullHeader) && ' scrolled')}>
                 <div className="container-fluid justify-content-end">
                     { showFullHeader && (
-                        <Link to={routeCodes.HOME} className="navbar-brand">AI Sign</Link>
+                        <Link to={routeCodes.HOME} className="navbar-brand">
+                            <img src={logonav} alt="AI Sign" />
+                        </Link>
                     ) }
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">

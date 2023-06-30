@@ -8,6 +8,9 @@
         }
     }
     &.scrolled {
-        background-color: $dark;
+        background-color: $black-45;
+    }
+    .navbar-brand {
+        padding: 0;
     }
 }
