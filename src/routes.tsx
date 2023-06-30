@@ -1,7 +1,8 @@
 import { matchPath } from 'react-router';
 import { useLocation } from 'react-router-dom';
 
-const publicPath = '/';
+
+const publicPath = `${import.meta.env.VITE_BASE_URL}`;
 
 export const routeCodes = {
   HOME: publicPath,
@@ -16,10 +17,10 @@ export const routes = [
 
 
 export function useMatchedRoute() {
-  const { pathname } = useLocation();
-  for (const route of routes) {
-    if (matchPath({ path: route }, pathname)) {
-      return route;
+    const { pathname } = useLocation();
+    for (const route of routes) {
+        if (matchPath({ path: route }, pathname)) {
+            return route;
+        }
     }
-  }
 }

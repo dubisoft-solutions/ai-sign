@@ -14,6 +14,12 @@ Active it
 
     . env/bin/activate
 
+
+### Before you start ###
+
+Copy the .env.tpl file to .env. This step is needed to setup the initial settings of the app
+
+
 ### How to start the dev server for development? ###
 
     npm install
