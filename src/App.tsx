@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './styles/app.scss';
+import { routeCodes } from './routes'
+
 import Header from './components/Header';
 import IndexPage from './pages/Index';
 import DemoPage from './pages/Demo';
@@ -21,12 +23,13 @@ function App() {
       <Header scrolled={scrolled}/>
       
       <Routes>
-        <Route path="/">
+        <Route path={routeCodes.HOME}>
           <Route index element={<IndexPage />} />
-          <Route path="demo" element={<DemoPage />} />
-          <Route path="contact" element={<ContactUsPage />} />
+          <Route path={routeCodes.DEMO} element={<DemoPage />} />
+          <Route path={routeCodes.CONTACT} element={<ContactUsPage />} />
         </Route>
       </Routes>
+      
     </BrowserRouter>
   )  
 }
