@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './styles/app.scss';
@@ -8,9 +8,17 @@ import DemoPage from './pages/Demo';
 import ContactUsPage from './pages/ContactUs';
 
 function App() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrolled(window.scrollY > 0);
+    });
+  }, []);
+
   return (
     <BrowserRouter>
-      <Header/>
+      <Header scrolled={scrolled}/>
       
       <Routes>
         <Route path="/">
