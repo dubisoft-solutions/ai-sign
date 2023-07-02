@@ -1,0 +1,8 @@
+.drop-zone-container {
+    .dropped-file-preview {
+        &>img {
+            max-width: 362px;
+            max-height: 362px;
+        }
+    }
+}
