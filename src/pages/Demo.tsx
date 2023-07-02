@@ -1,13 +1,18 @@
 import { useState } from 'react';
 
-
 import DropZone, { IDroppedFile } from '../components/DropZone';
-
+import { MAX_SIGNATURE_LENGTH } from '../utils/settings';
+import { generateRandomString } from '../utils/strings';
 
 
 const DemoPage = () => {
     const [selectedFile, setSelectedFile] = useState<IDroppedFile|undefined>(undefined)
+    const [signatureText, setSignatureText] = useState<string>('')
     const [step, setStep] = useState(0)
+
+    const generateSignature = () => {
+        setSignatureText(generateRandomString(MAX_SIGNATURE_LENGTH));
+    }
 
     return (
         <div className="content d-flex w-100 h-100 mx-auto flex-column">
@@ -67,17 +72,22 @@ const DemoPage = () => {
                                 }
                                 {step == 1 && 
                                     <div className="step-body">
-                                        <h3 className="text-start">Assign your signature</h3>
+                                        <h3 className="text-start">Add your signature</h3>
+                                        <p>This unique watermark attributes your content to you, and will only be visible when you verify and upload work that has utilized your content.</p>
                                     
+                                        <input value={signatureText} type="text" maxLength={MAX_SIGNATURE_LENGTH} onChange={(e) => setSignatureText(e.target.value)} />
+
+                                        <p>or <span className='' onClick={() => generateSignature()}>generate this for me</span></p>
+
                                         <div className="text-end mt-3">
-                                            <button className={"btn btn-info" + (!selectedFile ? " disabled" : '')} onClick={() => setStep(2)}>Next</button>
+                                            <button className={"btn btn-info" + (!signatureText ? " disabled" : '')} onClick={() => setStep(2)}>Next</button>
                                         </div>
                                     </div>
                                 }
                                 {step == 2 && 
                                     <div className="step-body">
                                         <h3 className="text-start">Download your content</h3>
-                                        
+
                                     </div>
                                 }
                             </div>
