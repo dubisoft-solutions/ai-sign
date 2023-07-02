@@ -36,6 +36,9 @@ const Header = ({scrolled=false}) => {
                             <LinkContainer to={routeCodes.DEMO}>
                                 <Nav.Link>Demo</Nav.Link>
                             </LinkContainer>
+                            <LinkContainer to={routeCodes.VERIFY}>
+                                <Nav.Link>Upload & verify</Nav.Link>
+                            </LinkContainer>
                             <LinkContainer to={routeCodes.CONTACT}>
                                 <Nav.Link>Contact us</Nav.Link>
                             </LinkContainer>
@@ -43,36 +46,6 @@ const Header = ({scrolled=false}) => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-           {/*  <nav >
-                <div className="container-fluid justify-content-end">
-                    { showFullHeader && (
-                        <Link to={routeCodes.HOME} className="navbar-brand">
-                            <img src={logonav} alt="AI Sign" />
-                        </Link>
-                    ) }
-                    <button className="navbar-toggler collapsed border-0 px-0 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="toggler-collapsed">
-                            <img src={menu} alt="Menu" />
-                        </span>
-                        <span className="toggler-expanded">
-                            <img src={close} alt="Close" />
-                        </span>
-                    </button>
-                    <div className="collapse navbar-collapse nav-menu-wrapper" id="navbarCollapse">
-                        <ul className="navbar-nav navigation-menu ms-auto">
-                            <li className="nav-item">
-                                <a href="#" className="nav-link py-1 px-3 active">FAQ</a>
-                            </li>
-                            <li className="nav-item">
-                                <Link  to={routeCodes.DEMO} className="nav-link py-1 px-3">Demo</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link  to={routeCodes.CONTACT} className="nav-link py-1 px-3">Contact us</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>*/}
         </header>
     )
 }
