@@ -19,7 +19,7 @@ const DropZone = (props: IDropZone) => {
 
     const { getRootProps, getInputProps } = useDropzone({
         accept: {
-            'image/*': ['.png', '.jpg'],
+            'image/jpeg': ['.jpeg', '.jpg'],
         },
         onDrop: (acceptedFiles) => {
             const file = {file: acceptedFiles[0], preview: URL.createObjectURL(acceptedFiles[0])};
