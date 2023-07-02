@@ -1,0 +1,1 @@
+export const MAX_SIGNATURE_LENGTH = parseInt(import.meta.env.VITE_MAX_SIGNATURE_LENGTH || 4);

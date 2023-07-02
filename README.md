@@ -1,4 +1,4 @@
-### ReadyTech Labs ###
+### AI Sign front app ###
 
 ### Install nodeenv ###
 
@@ -18,6 +18,10 @@ Active it
 ### Before you start ###
 
 Copy the .env.tpl file to .env. This step is needed to setup the initial settings of the app
+
+*VITE_FRONT_BASE_PATH* configures the base path of the front app. Default is /
+*VITE_API_BASE_URL=https://daa4-2601-600-9c81-3580-ac8e-71c1-f838-ab7f.ngrok-free.app/api/
+* configured full or relative path to the api server
 
 
 ### How to start the dev server for development? ###

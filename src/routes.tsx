@@ -2,7 +2,7 @@ import { matchPath } from 'react-router';
 import { useLocation } from 'react-router-dom';
 
 
-const publicPath = `${import.meta.env.VITE_BASE_URL}`;
+const publicPath = `${import.meta.env.VITE_FRONT_BASE_PATH}`;
 
 export const routeCodes = {
   HOME: publicPath,
