@@ -19,7 +19,8 @@ const DropZone = (props: IDropZone) => {
 
     const { getRootProps, getInputProps } = useDropzone({
         accept: {
-            'image/*': ['.png', '.jpg'],
+            'image/jpeg': ['.jpeg', '.jpg'],
+            'image/png': ['.png'],
         },
         onDrop: (acceptedFiles) => {
             const file = {file: acceptedFiles[0], preview: URL.createObjectURL(acceptedFiles[0])};
@@ -37,7 +38,7 @@ const DropZone = (props: IDropZone) => {
         <div className="drop-zone-container">
             {droppedFile ? (
                 <div className="dropped-file-preview">
-                    <img src={droppedFile.preview} alt={droppedFile.file.name} />
+                    <img className="max-image-preview-size" src={droppedFile.preview} alt={droppedFile.file.name} />
                     <div className="dropped-file-details d-flex justify-content-center">
                         <span className='dropped-file-name'>{droppedFile.file.name}</span> 
                         <button className='btn p-0' onClick={() => clearDroppedFile()}>

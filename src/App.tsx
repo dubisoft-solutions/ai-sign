@@ -8,6 +8,7 @@ import Header from './components/Header';
 import IndexPage from './pages/Index';
 import DemoPage from './pages/Demo';
 import ContactUsPage from './pages/ContactUs';
+import VerifyPage from './pages/Verify'
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,10 +27,11 @@ function App() {
         <Route path={routeCodes.HOME}>
           <Route index element={<IndexPage />} />
           <Route path={routeCodes.DEMO} element={<DemoPage />} />
+          <Route path={routeCodes.VERIFY} element={<VerifyPage />} />
           <Route path={routeCodes.CONTACT} element={<ContactUsPage />} />
         </Route>
       </Routes>
-      
+
     </BrowserRouter>
   )  
 }

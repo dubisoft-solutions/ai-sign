@@ -7,12 +7,13 @@ const publicPath = `${import.meta.env.VITE_FRONT_BASE_PATH}`;
 export const routeCodes = {
   HOME: publicPath,
   DEMO: `${ publicPath }demo`,
+  VERIFY: `${ publicPath }verify`,
   CONTACT: `${ publicPath }contact`,
 };
 
 
 export const routes = [
-    routeCodes.HOME, routeCodes.DEMO, routeCodes.CONTACT
+    routeCodes.HOME, routeCodes.DEMO, routeCodes.VERIFY, routeCodes.CONTACT
 ]
 
 
