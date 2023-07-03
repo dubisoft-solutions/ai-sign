@@ -99,11 +99,11 @@ const DemoPage = () => {
                                 </div>
                             </div>
 
-                            <div className="card">
+                            <div className="card mb-3">
                                 <div className="card-body">
                                     {step == 0 && 
                                         <div className="step-body">
-                                            <h3 className="text-start">Upload your content</h3>
+                                            <h3 className="text-start mb-lg-5 mb-4">Upload your content</h3>
                                             <DropZone onSelectFile={(droppedFile) => setSelectedFile(droppedFile)}/>
                                         
                                             <div className="text-end mt-3">
@@ -112,13 +112,13 @@ const DemoPage = () => {
                                         </div>
                                     }
                                     {step == 1 && 
-                                        <div className="step-body">
-                                            <h3 className="text-start">Add your signature</h3>
-                                            <p>This unique watermark attributes your content to you, and will only be visible when you verify and upload work that has utilized your content.</p>
+                                        <div className="step-body text-start">
+                                            <h3>Add your signature</h3>
+                                            <p className="mb-5">This unique watermark attributes your content to you, and will only be visible when you verify and upload work that has utilized your content.</p>
                                         
-                                            <input value={signatureText} type="text" maxLength={MAX_SIGNATURE_LENGTH} onChange={(e) => setSignatureText(e.target.value)} />
+                                            <input value={signatureText} type="text" className="form-control mb-3" placeholder="Add your unique signature here..." maxLength={MAX_SIGNATURE_LENGTH} onChange={(e) => setSignatureText(e.target.value)} />
 
-                                            <p>or <span className='fw-bold' onClick={() => generateSignature()}>generate this for me</span></p>
+                                            <p className="text-dark">or <span className='text-decoration-underline' onClick={() => generateSignature()}>generate this for me</span></p>
 
                                             <div className="text-end mt-3">
                                                 <button className={"btn btn-info" + (!signatureText ? " disabled" : '')} onClick={() => handleSubmit()}>Next</button>
@@ -126,21 +126,46 @@ const DemoPage = () => {
                                         </div>
                                     }
                                     {step == 2 && 
-                                        <div className="step-body">
-                                            <h3 className="text-start">Download your content</h3>
-                                            <p>Your content is now protected with your unique signature. If your content is consumed by an .AI model, reappropriated or utilized in anyway, upload it here to verify that your content was stolen.</p>
-                                            <p>To secure your content, ensure only this version is publicly available online.</p>
+                                        <div className="step-body text-start">
+                                            <h3 className="mb-2">Download your content</h3>
+                                            <p className="mb-3">Your content is now protected with your unique signature. If your content is consumed by an .AI model, reappropriated or utilized in anyway, upload it here to verify that your content was stolen.</p>
+                                            <p className="mb-5">To secure your content, ensure only this version is publicly available online.</p>
                                             
                                             <UploadFileBtn fileStringUrl={encodedImageUrl} />
 
-                                            <Link to={routeCodes.VERIFY} className="btn btn-outline-success">
-                                                <span>Upload and test your signature</span>
-                                                <FontAwesomeIcon icon={faUpload} className='ms-3' />
-                                            </Link>
+                                            <div className="row justify-content-center d-lg-flex gap-2 d-grid">
+                                                <div className="col-lg-8">
+                                                    <Link to={routeCodes.VERIFY} className="btn btn-outline-info btn-lg w-100">
+                                                        <span>Upload and test your signature</span>
+                                                        <FontAwesomeIcon icon={faUpload} className='ms-3' />
+                                                    </Link>
+                                                </div>
+                                            </div>
                                         </div>
                                     }
                                 </div>
                             </div>
+
+                            {step == 2 && 
+                            <div className="card">
+                                <div className="card-body">
+                                        <div className="step-body text-start">
+                                            <h3 className="mb-1">Sign up to be notified when someone steals your shit</h3>
+                                            <p className="mb-3">We proactively scan people who commonly steal art. If you would like to be notified.</p>
+                                            
+                                            <form className="email-style row g-3">
+                                                <div className="col-lg-7">
+                                                    <input type="email" className="form-control border-0" id="inputEmail" placeholder="Enter your email" />
+                                                </div>
+                                                <div className="col-lg-3">
+                                                    <button type="submit" className="btn btn-info btn-lg w-100">Sign up</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                   
+                                </div>
+                            </div>
+                             }
                         </div>
                     </div>
                 </div>

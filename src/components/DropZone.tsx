@@ -4,6 +4,9 @@ import { useDropzone } from "react-dropzone";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
+
+import upload from '../assets/images/upload.svg';
+
 export interface IDroppedFile {
     file: File;
     preview: string;
@@ -35,10 +38,10 @@ const DropZone = (props: IDropZone) => {
     }
 
     return (
-        <div className="drop-zone-container">
+        <div className="drop-zone-container row justify-content-center">
             {droppedFile ? (
                 <div className="dropped-file-preview">
-                    <img className="max-image-preview-size" src={droppedFile.preview} alt={droppedFile.file.name} />
+                    <img className="max-image-preview-size w-100" src={droppedFile.preview} alt={droppedFile.file.name} />
                     <div className="dropped-file-details d-flex justify-content-center">
                         <span className='dropped-file-name'>{droppedFile.file.name}</span> 
                         <button className='btn p-0' onClick={() => clearDroppedFile()}>
@@ -49,10 +52,13 @@ const DropZone = (props: IDropZone) => {
                 </div>
             ) : (
                 <div
-                    {...getRootProps({ className: "dropzone p-5 bg-success" })}
+                    {...getRootProps({ className: "dropzone p-5 col-lg-8 text-center" })}
                 >
                     <input {...getInputProps()} />
-                    <p>Drag 'n' drop some files here, or click to select files</p>
+                    <img src={upload} alt="Upload" />
+                    <p className="my-2">DRAG AND DROP</p>
+                    <p className="fs-5 mb-3">or <span className="text-decoration-underline">browse your files</span></p>
+                    <p className="fs-6 fst-italic text-dark-grey">Compatible with images, audio, text and videos</p>
                     <div>
                     </div>
                 </div>

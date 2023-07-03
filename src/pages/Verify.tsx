@@ -62,47 +62,47 @@ const VerifyPage = () => {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-10 text-center pb-4">
-                            <h2 className="mb-lg-4 mb-3">Decode and verify your content</h2>
-                            <p className="fs-3 mb-lg-5 mb-4">Upload content to determine if it contains your unique signature. Any rendition or reappropriation of your content will contain your unique signature</p>
-                           
-
                             <div className="card">
                                 <div className="card-body">
+                                <h3 className="fs-3 mb-1 text-start">Decode and verify your content</h3>
+                                <p className="fs-5 mb-lg-5 mb-4 text-start">Upload content to determine if it contains your unique signature. Any rendition or reappropriation of your content will contain your unique signature</p>
                                     {step == 0 && 
                                         <div className="step-body">
                                             <DropZone onSelectFile={(droppedFile) => setSelectedFile(droppedFile)}/>
                                         
-                                            <div className="text-end mt-3">
+                                            <div className="text-end mt-5">
                                                 <button className={"btn btn-info" + (!selectedFile ? " disabled" : '')} onClick={() => handleSubmit()}>Decode and verify</button>
                                             </div>
                                         </div>
                                     }
                                     {step == 1 && 
                                         <div className="step-body">
-                                            <div className="row">
-                                                <div className="col-md-4">
-                                                    <img className='w-100' src={selectedFile?.preview} alt={selectedFile?.file.name} />
-                                                </div>
-                                                <div className="col-md-8">
-                                                    {signatureText ? (
-                                                        <>
-                                                            <h3>We have detected this content contains a unique signature:</h3>
-                                                            <div className="d-flex align-items-center justify-content-center">
-                                                                <FontAwesomeIcon icon={faCircleCheck} size='lg' className='text-success' />
-                                                                <span>{signatureText}</span>
-                                                            </div>
-                                                        </>
-                                                    ) : (
-                                                        <>
-                                                            <h3>Signature was not detected</h3>
-                                                        </>
-                                                    )}
+                                            <div className="border border-muted rounded-3 p-lg-4 p-3 mb-5">
+                                                <div className="row">
+                                                    <div className="col-lg-4 mb-lg-0 mb-3">
+                                                        <img className='w-100' src={selectedFile?.preview} alt={selectedFile?.file.name} />
+                                                    </div>
+                                                    <div className="col-md-8 text-start">
+                                                        {signatureText ? (
+                                                            <>
+                                                                <h3 className="fs-3 mb-4">We have detected this content contains a unique signature:</h3>
+                                                                <div className="d-flex align-items-center justify-content-start">
+                                                                    <FontAwesomeIcon icon={faCircleCheck} size='lg' className='text-success fs-1 me-4' />
+                                                                    <span className="border border-muted rounded-3 p-lg-4 p-3 bg-light fw-bold fs-4">{signatureText}</span>
+                                                                </div>
+                                                            </>
+                                                        ) : (
+                                                            <>
+                                                                <h3>Signature was not detected</h3>
+                                                            </>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className="row">
-                                                <div className="col-12 text-end">
-                                                <Button variant="success" onClick={() => {handleReset()}}>Try again</Button>
-                                                    <Button variant="success" onClick={() => {}}>Download report</Button>
+                                                <div className="col-12 text-end d-lg-flex d-grid justify-content-lg-end">
+                                                <Button variant="outline-info me-lg-3 mb-lg-0 mb-3" onClick={() => {handleReset()}}>Try again</Button>
+                                                    <Button variant="info" onClick={() => {}}>Download report</Button>
                                                 </div>
                                             </div>
                                         </div>

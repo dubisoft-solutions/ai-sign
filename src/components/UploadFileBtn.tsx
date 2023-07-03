@@ -17,10 +17,14 @@ const UploadFileBtn = (props: IUploadFileBtn) => {
     }
 
     return (
-        <button className='btn btn-success' onClick={(e) => handleDownloadEncodedImageClick(e)}>
-            <span>Export your content</span>
-            <FontAwesomeIcon icon={faDownload} className='ms-3' />
-        </button>
+        <div className="row justify-content-center d-lg-flex gap-2 d-grid">
+            <div className="col-lg-8">
+                <button className='btn btn-info btn-lg w-100 mb-3' onClick={(e) => handleDownloadEncodedImageClick(e)}>
+                    <span>Export your content</span>
+                    <FontAwesomeIcon icon={faDownload} className='ms-3' />
+                </button>
+            </div>
+        </div>
     )
 }
 

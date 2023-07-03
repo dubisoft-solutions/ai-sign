@@ -52,7 +52,7 @@ const IndexPage = () => {
                                 <div className="w-100 text-center pb-lg-0 pb-4">
                                     <h3 className="text-secondary fw-normal mb-4">Data owners</h3>
                                     <img src={owners} alt="Data owners" />
-                                    <p className="fs-4 mt-3">Text, image, video, and audio data is stolen</p>
+                                    <p className="fs-5 mt-3">Text, image, video, and audio data is stolen</p>
                                 </div>
                                 <div className="flex-shrink-1 text-center pb-lg-0 pb-4 d-lg-block d-none">
                                     <img src={arrowright} alt="Arrow right" />
@@ -60,7 +60,7 @@ const IndexPage = () => {
                                 <div className="w-100 text-center pb-lg-0 pb-4">
                                     <h3 className="text-secondary fw-normal mb-4">AI companies</h3>
                                     <img src={companies} alt="Companies" />
-                                    <p className="fs-4 mt-3">Microsoft, Github, Midjourney, OpenAI, and StabilityAI
+                                    <p className="fs-5 mt-3">Microsoft, Github, Midjourney, OpenAI, and StabilityAI
 train models for applications </p>
                                 </div>
                                 <div className="flex-shrink-1 text-center pb-lg-0 pb-4 d-lg-block d-none">
@@ -69,14 +69,14 @@ train models for applications </p>
                                 <div className="w-100 text-center">
                                     <h3 className="text-secondary fw-normal mb-4">End Users</h3>
                                     <img src={users} alt="Users" />
-                                    <p className="fs-4 mt-3">Users of
+                                    <p className="fs-5 mt-3">Users of
 Github Copilot, ChatGPT, and StableDiffusion
  pay AI companies. Data owners get nothing.</p>
                                 </div>
                             </div>
                         </div>
                         <div className="mb-4">
-                            <p className="fs-5">Can probably cite ongoing lawsuits</p>
+                            <p className="fs-7">Can probably cite ongoing lawsuits</p>
                             <a href="https://techcrunch.com/2023/01/27/the-current-legal-cases-against-generative-ai-are-just-the-beginning/" className="btn-link d-block">https://techcrunch.com/2023/01/27/the-current-legal-cases-against-generative-ai-are-just-the-beginning/</a>
                             <a href="https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart" className="btn-link d-block">https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart</a>
                             <a href="https://www.latimes.com/entertainment-arts/music/story/2023-04-18/drake-the-weeknd-ai-song-fake-removed-streaming-services" className="btn-link d-block">https://www.latimes.com/entertainment-arts/music/story/2023-04-18/drake-the-weeknd-ai-song-fake-removed-streaming-services</a>

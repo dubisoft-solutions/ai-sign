@@ -1,0 +1,12 @@
+.dropzone {
+    background-color: $ghost-white;
+    border: 2px dashed $grey-148;
+    border-radius: .5rem;
+    p {
+        font-size: 1.75rem;
+        color: $dark-grey;
+        @include media-breakpoint-down(lg) {
+            font-size: 1.5rem;
+        }
+    }
+}
