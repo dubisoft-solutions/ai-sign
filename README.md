@@ -33,3 +33,5 @@ Copy the .env.tpl file to .env. This step is needed to setup the initial setting
 
     npm run build
 
+
+Once executed, the *dist* folder will be created. The folder contains ready to go html and compiled assets
