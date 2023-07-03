@@ -118,7 +118,7 @@ const DemoPage = () => {
                                         
                                             <input value={signatureText} type="text" className="form-control mb-3" placeholder="Add your unique signature here..." maxLength={MAX_SIGNATURE_LENGTH} onChange={(e) => setSignatureText(e.target.value)} />
 
-                                            <p className="text-dark">or <span className='text-decoration-underline' onClick={() => generateSignature()}>generate this for me</span></p>
+                                            <p className="text-dark">or <span className='text-decoration-underline cursor-pointer' onClick={() => generateSignature()}>generate this for me</span></p>
 
                                             <div className="text-end mt-3">
                                                 <button className={"btn btn-info" + (!signatureText ? " disabled" : '')} onClick={() => handleSubmit()}>Next</button>
