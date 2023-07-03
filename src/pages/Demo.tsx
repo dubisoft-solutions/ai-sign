@@ -133,7 +133,7 @@ const DemoPage = () => {
                                             
                                             <UploadFileBtn fileStringUrl={encodedImageUrl} />
 
-                                            <div className="row justify-content-center d-lg-flex gap-2 d-grid">
+                                            <div className="row justify-content-center d-lg-flex gap-2 d-block">
                                                 <div className="col-lg-8">
                                                     <Link to={routeCodes.VERIFY} className="btn btn-outline-info btn-lg w-100">
                                                         <span>Upload and test your signature</span>

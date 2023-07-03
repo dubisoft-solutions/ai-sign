@@ -29,7 +29,7 @@ const Header = ({scrolled=false}) => {
                     )}
                     <Navbar.Toggle aria-controls="navbar-nav" className="ms-auto" />
                     <Navbar.Collapse id="navbar-nav">
-                        <Nav className="ms-auto">
+                        <Nav className="ms-auto pt-3">
                             <LinkContainer to={routeCodes.HOME}>
                                 <Nav.Link>FAQ</Nav.Link>
                             </LinkContainer>

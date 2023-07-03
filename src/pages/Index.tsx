@@ -27,7 +27,7 @@ const IndexPage = () => {
     for your content that withstands the challenges posed 
     by generative AI models.<br></br> 
     Works for images, videos, audio, and text.</p>
-                        <div className="d-lg-flex gap-2 d-grid">
+                        <div className="d-lg-flex gap-2 d-block">
                             <a className="btn btn-outline-info w-100" href="#" role="button">Watch how it works</a>
                             <Link to={routeCodes.DEMO} className="btn btn-info w-100">Try a demo</Link>
                         </div>
@@ -52,7 +52,7 @@ const IndexPage = () => {
                                 <div className="w-100 text-center pb-lg-0 pb-4">
                                     <h3 className="text-secondary fw-normal mb-4">Data owners</h3>
                                     <img src={owners} alt="Data owners" />
-                                    <p className="fs-5 mt-3">Text, image, video, and audio data is stolen</p>
+                                    <p className="fs-6 mt-3">Text, image, video, and audio data is stolen</p>
                                 </div>
                                 <div className="flex-shrink-1 text-center pb-lg-0 pb-4 d-lg-block d-none">
                                     <img src={arrowright} alt="Arrow right" />
@@ -60,7 +60,7 @@ const IndexPage = () => {
                                 <div className="w-100 text-center pb-lg-0 pb-4">
                                     <h3 className="text-secondary fw-normal mb-4">AI companies</h3>
                                     <img src={companies} alt="Companies" />
-                                    <p className="fs-5 mt-3">Microsoft, Github, Midjourney, OpenAI, and StabilityAI
+                                    <p className="fs-6 mt-3">Microsoft, Github, Midjourney, OpenAI, and StabilityAI
 train models for applications </p>
                                 </div>
                                 <div className="flex-shrink-1 text-center pb-lg-0 pb-4 d-lg-block d-none">
@@ -69,7 +69,7 @@ train models for applications </p>
                                 <div className="w-100 text-center">
                                     <h3 className="text-secondary fw-normal mb-4">End Users</h3>
                                     <img src={users} alt="Users" />
-                                    <p className="fs-5 mt-3">Users of
+                                    <p className="fs-6 mt-3">Users of
 Github Copilot, ChatGPT, and StableDiffusion
  pay AI companies. Data owners get nothing.</p>
                                 </div>

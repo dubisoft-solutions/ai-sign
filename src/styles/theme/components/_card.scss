@@ -10,5 +10,8 @@
     }
     .card-body {
         padding: 1.5rem;
+        @include media-breakpoint-down(lg) {
+            padding: 1rem;
+        }
     }
 }

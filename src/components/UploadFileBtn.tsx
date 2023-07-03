@@ -17,7 +17,7 @@ const UploadFileBtn = (props: IUploadFileBtn) => {
     }
 
     return (
-        <div className="row justify-content-center d-lg-flex gap-2 d-grid">
+        <div className="row justify-content-center d-lg-flex gap-2 d-block">
             <div className="col-lg-8">
                 <button className='btn btn-info btn-lg w-100 mb-3' onClick={(e) => handleDownloadEncodedImageClick(e)}>
                     <span>Export your content</span>

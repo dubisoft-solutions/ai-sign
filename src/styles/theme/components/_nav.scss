@@ -1,5 +1,7 @@
 .navbar {
     --navbar-height: 4.25rem;
+    --bs-navbar-toggler-focus-width: 0;
+    --bs-border-width: 0;
     &.navbar-expand .navbar-nav {
         .nav-link {
             font-weight: normal;
