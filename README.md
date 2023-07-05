@@ -35,3 +35,11 @@ Copy the .env.tpl file to .env. This step is needed to setup the initial setting
 
 
 Once executed, the *dist* folder will be created. The folder contains ready to go html and compiled assets
+
+### How to deploy to google pages ###
+
+Run the following script
+
+    npm run deploy
+
+The project will be deployed and available [url](https://dubisoft-solutions.github.io/ai-sign/ "here")
